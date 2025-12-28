@@ -1,0 +1,30 @@
+[project]
+name = "py-docsnap"
+version = "0.1.0"
+description = "Python documentation snapshot tool for capturing and managing documentation states"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pillow>=10.0.0",
+    "pyyaml>=6.0",
+    "click>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/docsnap"]
+
+[project.scripts]
+docsnap = "docsnap.cli:main"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
