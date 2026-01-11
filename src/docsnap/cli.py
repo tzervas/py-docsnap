@@ -1,7 +1,8 @@
 """Command-line interface for docsnap."""
 
-import click
 from pathlib import Path
+
+import click
 
 
 @click.group()
@@ -13,7 +14,9 @@ def main():
 
 @main.command()
 @click.argument("source", type=click.Path(exists=True))
-@click.option("--output", "-o", type=click.Path(), help="Output directory for snapshots")
+@click.option(
+    "--output", "-o", type=click.Path(), help="Output directory for snapshots"
+)
 @click.option("--format", "-f", type=click.Choice(["png", "jpg", "pdf"]), default="png")
 def capture(source, output, format):
     """Capture documentation snapshots from source directory."""
