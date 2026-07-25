@@ -3,7 +3,7 @@ name = "py-docsnap"
 version = "0.1.0"
 description = "Python documentation snapshot tool for capturing and managing documentation states"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
     "pillow>=10.0.0",
     "pyyaml>=6.0",
